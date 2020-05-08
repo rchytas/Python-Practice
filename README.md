@@ -1,2 +1,2 @@
 # Python-Practice
- Python Practie
+Simple Python Tutorials
