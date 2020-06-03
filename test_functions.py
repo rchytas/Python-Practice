@@ -1,4 +1,4 @@
-from functions import bubble_sort, insertion_sort, factorial, binary_search, fibonacci, fib_to
+from functions import bubble_sort, insertion_sort, factorial, binary_search, fibonacci, fib_to, toLowerCase
 '''greet(action = "Walking", name = "Manish")
 greet1("Manish", "Tom")
 print ("My simple interest is ",simple_interest(2000,6.5, 12)) 
@@ -22,13 +22,20 @@ a = [1,5,7,8,11,13,16]
 b = [8,4,1,3,2,6]
 c = [6,5,3,1,8,7,2,4]
 
-print (binary_search(a,11,0,len(a)-1))
+print (factorial(4))
 
-bubble_sort(b)
+#print (binary_search(a,11,0,len(a)-1))
 
-insertion_sort(c)
+#bubble_sort(b)
 
-print(fib_to(20))
-print(fib_to(20)[20])
+#insertion_sort(c)
+
+#print(fib_to(20))
+#print(fib_to(20)[20])
+
+#print(toLowerCase("ABCD"))
+
+
+#print(ord('a'))
 
 

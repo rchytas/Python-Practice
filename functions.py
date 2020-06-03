@@ -24,13 +24,15 @@ def factorial(n):
     return n * factorial(n-1)
 
 # Demonstrates Binary Search Algorithm
-def binary_search (a, key, start, end):
+def binary_search (input_arr, key, start, end):
+    print("Binary Search Results")
+
     if start <= end:
         mid = int((start + end) / 2)
-        if a[mid] > key:
-            return binary_search (a, key, start, mid-1)
-        elif a[mid] < key:
-            return binary_search (a, key, mid+1, end)
+        if input_arr[mid] > key:
+            return binary_search (input_arr, key, start, mid-1)
+        elif input_arr[mid] < key:
+            return binary_search (input_arr, key, mid+1, end)
         else:
             return mid
     else:
@@ -38,10 +40,14 @@ def binary_search (a, key, start, end):
         return -1
     
 # Demonstrates Insertion Sort Algorithm
+# [1,4,2,6,1,0,8]
 def insertion_sort(a):
+    print("Original Array",a)
+    print("Insertion Sort Results")
     for i in range (1, len(a)):
         key = a[i]
         j = i-1
+        print("Now checking Indexes ",i,j)
         while j >= 0 and a[j] > key:
             a[j+1] = a[j]
             j -= 1
@@ -50,8 +56,10 @@ def insertion_sort(a):
 
 # Demonstrates Bubble Sort Algorithm
 def bubble_sort(a):
+    print("Bubble Sort Results")
     for i in range(len(a)):
         for j in range(1, len(a)):
+            print("Now checking Indexes ",i,j)
             if a[j-1] > a[j]:
                 a[j-1], a[j] = a[j], a[j-1]
     print(a)
@@ -70,3 +78,17 @@ def fib_to(n):
     for i in range(2, n+1):
         fibs.append(fibs[-1] + fibs[-2])
     return fibs
+
+def toLowerCase(str):
+    """
+    :type str: str
+    :rtype: str
+    """
+    res =""
+    for char in str:
+        if ord(char) >=65 and ord(char) <= 90:
+            res +=chr(ord(char)+32)
+        else:
+            res+=char
+    
+    return res
